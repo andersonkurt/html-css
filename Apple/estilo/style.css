@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MundoTech';
+    src: url('../fontes/OriginTech.otf') format('opentype');
+}
+
+:root {
+    --cor1: #9dddf0af;
+    --cor2: #40AEE5;
+    --cor3: #4B90B3;
+    --cor4: #2B7499;
+    --cor5: #1D4E66;
+    --cor6: #163e52;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-mundotech: 'MundoTech', cursive;
+}
+
+body {
+    background-color: #9dddf08c;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor5));
+    padding-top: 0px;
+    box-shadow:  0px 2px 7px rgba(0, 0, 0, 0.349);
+}
+
+header > h1 {
+    font-family: var(--fonte-mundotech);
+    font-weight: normal;
+    font-size: 2.5em; /*tamanho da fonte*/
+    text-align: center;
+    margin: 0px;
+    margin-bottom: -5px;
+    padding: 15px;
+    padding-top: 20px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.418); /*sombra do texto*/
+}
+
+nav {
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    padding: 10px; /* espaço entre as palavras*/
+}
+
+nav > a:hover {
+    background-color: var(--cor4);
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418); /*sombra da caixa*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1 {
+    color: var(--cor6);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    padding-left: 10px; /*distancia espaço lado esquerdo*/
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+
+main h2 {
+    color: var(--cor6);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    margin-top: -2px;
+    margin-bottom: -2px;
+    padding-left: 10px;
+}
+
+main p {
+    text-align: justify; 
+    text-indent: 30px; /*espaço do paragrafo*/
+    line-height: 1.5em;
+}
+
+main img {
+    display: block;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+footer {
+    background-image: linear-gradient(to right, transparent, var(--cor3), var(--cor4), var(--cor3), transparent);
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+footer p {
+    padding: 5px;
+    margin-bottom: 0px;
+}
