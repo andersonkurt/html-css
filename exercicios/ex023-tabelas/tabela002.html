@@ -13,6 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; /*para poder executar os comandos para fixar o cabeçalho (Estado e População)*/
         }
 
         td, th {
@@ -20,9 +21,26 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(2n) { /* no lugar de "2n", pode usar o odd/even que seria impar/par, ou 2n-1 */
+            background-color: lightgray;
         }
         
         td.num {
@@ -35,6 +53,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD (normal), TH (titulos)
             TBODY
@@ -43,10 +62,12 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
+
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th> <!-- col = coluna, ou seja, os estados estão em baixo (coluna), não muda nada no site, é para fins de informação/semantica -->
+                <th scope="col" style="width: 50px">População</th>
             </tr>
         </thead>
         <tbody>
@@ -160,9 +181,15 @@
             </tr>
         </tbody>
         <tfoot>
-            <th>Total de Habitante</th>
+            <th scope="row">Total de Habitante</th> <!-- row = linha, ou seja, o total de habitantes esta ao lado (linha) -->
             <td class="num"><strong>210.147.125</strong></td>
         </tfoot>
+
     </table>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo doloribus, quis fuga dicta necessitatibus id ut nostrum eligendi delectus maxime excepturi asperiores at et fugiat? Unde maxime accusantium rem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, debitis mollitia? Dolores expedita pariatur non nostrum dolorum placeat consequuntur voluptate quaerat! Ratione porro deleniti quibusdam debitis quis consequuntur? Perferendis, minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam assumenda laboriosam perspiciatis asperiores veniam fugiat aperiam quasi provident? Totam, veritatis voluptatum soluta ex ipsam aspernatur! Voluptatibus assumenda aut dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit quibusdam placeat assumenda nisi quia quisquam voluptatem veniam? Possimus, voluptatum commodi? Ipsam iste tenetur dolores ratione earum veniam natus at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam cum temporibus accusamus cumque. Nihil aut necessitatibus minus cupiditate dicta animi odio impedit, quasi voluptatem corrupti quibusdam ducimus. Voluptatum, et odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo doloribus, quis fuga dicta necessitatibus id ut nostrum eligendi delectus maxime excepturi asperiores at et fugiat? Unde maxime accusantium rem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, debitis mollitia? Dolores expedita pariatur non nostrum dolorum placeat consequuntur voluptate quaerat! Ratione porro deleniti quibusdam debitis quis consequuntur? Perferendis, minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam assumenda laboriosam perspiciatis asperiores veniam fugiat aperiam quasi provident? Totam, veritatis voluptatum soluta ex ipsam aspernatur! Voluptatibus assumenda aut dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit quibusdam placeat assumenda nisi quia quisquam voluptatem veniam? Possimus, voluptatum commodi? Ipsam iste tenetur dolores ratione earum veniam natus at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam cum temporibus accusamus cumque. Nihil aut necessitatibus minus cupiditate dicta animi odio impedit, quasi voluptatem corrupti quibusdam ducimus. Voluptatum, et odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo doloribus, quis fuga dicta necessitatibus id ut nostrum eligendi delectus maxime excepturi asperiores at et fugiat? Unde maxime accusantium rem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, debitis mollitia? Dolores expedita pariatur non nostrum dolorum placeat consequuntur voluptate quaerat! Ratione porro deleniti quibusdam debitis quis consequuntur? Perferendis, minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam assumenda laboriosam perspiciatis asperiores veniam fugiat aperiam quasi provident? Totam, veritatis voluptatum soluta ex ipsam aspernatur! Voluptatibus assumenda aut dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit quibusdam placeat assumenda nisi quia quisquam voluptatem veniam? Possimus, voluptatum commodi? Ipsam iste tenetur dolores ratione earum veniam natus at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam cum temporibus accusamus cumque. Nihil aut necessitatibus minus cupiditate dicta animi odio impedit, quasi voluptatem corrupti quibusdam ducimus. Voluptatum, et odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo doloribus, quis fuga dicta necessitatibus id ut nostrum eligendi delectus maxime excepturi asperiores at et fugiat? Unde maxime accusantium rem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, debitis mollitia? Dolores expedita pariatur non nostrum dolorum placeat consequuntur voluptate quaerat! Ratione porro deleniti quibusdam debitis quis consequuntur? Perferendis, minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam assumenda laboriosam perspiciatis asperiores veniam fugiat aperiam quasi provident? Totam, veritatis voluptatum soluta ex ipsam aspernatur! Voluptatibus assumenda aut dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit quibusdam placeat assumenda nisi quia quisquam voluptatem veniam? Possimus, voluptatum commodi? Ipsam iste tenetur dolores ratione earum veniam natus at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam cum temporibus accusamus cumque. Nihil aut necessitatibus minus cupiditate dicta animi odio impedit, quasi voluptatem corrupti quibusdam ducimus. Voluptatum, et odio.</p>
 </body>
 </html>
