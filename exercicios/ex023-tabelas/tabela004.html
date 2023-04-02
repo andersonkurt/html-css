@@ -34,14 +34,14 @@
         </caption>
         <thead>
             <tr>
-                <th>Grupos</th>
-                <th>Nomes</th>
-                <th colspan="3">Filmes</th>
+                <th scope="col">Grupos</th> <!-- "col" pq as informações de "Grupos" ta em coluna (pra baixo, q sao "mulheres" e "homens")-->  <!-- "scope" é só no th (para fins de informação) -->
+                <th scope="col" scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th> <!-- "colgroup" pq tem mais de uma coluna para informações -->
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="3">Mulheres</th>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
                 <td>Ana Maria Santos</td>
                 <td>Alien</td>
                 <td>Rambo</td>
@@ -59,7 +59,7 @@
                 <td>Matrix</td>
                 <td>Gladiador</td>
                 <tr>
-                    <th rowspan="3">Homens</th>
+                    <th rowspan="3" scope="rowgroup">Homens</th>
                     <td>Bruno Mendonça</td>
                     <td>Intocáveis</td>
                     <td>Amnésia</td>
@@ -78,6 +78,12 @@
                     <td>Toy Story</td>
             </tr>
         </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4" scope="row">Total</th> <!-- só row, pq a unica informação é a "1000" que é na msm linha/row -->
+                <td>1000</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
