@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vw; /* vw = largura tela... 97% */
+            height: 400px;
+            border: 2px solid black;
+        }
+
+        /* # = id */
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, neque eaque! Eveniet aut vel maxime id? Minima tenetur velit sint, consequatur voluptates a, fuga dolores ut non recusandae ratione excepturi!</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus beatae recusandae laborum reprehenderit ratione rem vel fuga earum atque reiciendis accusantium est, dolor illo doloremque alias nulla eligendi, natus amet! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio, facilis qui magnam, ullam veritatis doloremque mollitia hic architecto voluptate recusandae maiores dolore tempore itaque similique pariatur nostrum magni neque?</p>
+
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum delectus accusamus, necessitatibus ad nisi beatae asperiores temporibus adipisci. Praesentium modi quam magnam quia dolorem incidunt atque libero distinctio excepturi minus?</p><img src='imagens/html-css1.png'>">
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum minus quos libero! Voluptate, nihil aliquid. Qui doloribus quos ut ea! Aut corrupti odio fuga alias sed iusto error adipisci ad. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod fugit voluptas esse, sed earum quas accusantium et officia cupiditate, porro praesentium aliquam dolore repudiandae placeat maxime culpa soluta aperiam vitae.</p>
+</body>
+</html>
