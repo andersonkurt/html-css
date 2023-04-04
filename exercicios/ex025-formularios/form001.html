@@ -13,10 +13,14 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form>
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+    <form action="cadastro.php" method="POST" autocomplete="off"> <!-- "autocomplete=off" é para o formulario não dar uma sugestão de 'nome/descrição' -->
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p> <!-- "name" é mais útil para html e php, e "id" é mais útil para javascript E PARA FAZER A LIGAÇÃO COM "LABEL" -->
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
+
+        <!-- O label faz a ligação do "nome" com o campo ao lado dele na página -->
+
+        <!-- "method=POST" dados digitados não aparecem na url (mas não está protegido) mais pra frente vamos aprender como proteger senhas e etc -->
     </form>
 </body>
 </html>
