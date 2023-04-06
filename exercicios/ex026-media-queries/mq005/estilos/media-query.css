@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints: 
+
+Pequenas telas: até 600px;
+Celular: de 600px até 768px;
+Tablet: 768px até 992px;
+Desktop: 992px até 1200px;
+Grandes telas: acima de 1200px;
+(esses valores padrões, sofrem mudanças com o tempo, então, fazer a conferencia)
+*/
+
+@media screen and (min-width: 768px) {
+    i#burguer {
+        display: none; /* vai fazer o hamburguinho desaparecer */
+    }
+
+    menu {
+        display: block; /* vai aparecer os itens do menu */
+    }
+
+    menu > ul > li {
+        display: inline-block; /* vai fazer com que a lista do menu fique um do lado do outro */
+    }
+
+    main {
+        width: 768px;
+    }
+}
